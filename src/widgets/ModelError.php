@@ -1,5 +1,5 @@
 <?php
-namespace onix\widgest;
+namespace onix\widgets;
 
 use Yii;
 use yii\base\Model;

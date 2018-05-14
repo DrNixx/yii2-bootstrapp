@@ -1,5 +1,5 @@
 <?php
-namespace onix\widgest;
+namespace onix\widgets;
 
 use yii\bootstrap\ActiveForm as ActiveFormBase;
 use yii\helpers\ArrayHelper;
@@ -15,7 +15,7 @@ class ActiveForm extends ActiveFormBase
      * @var string the default field class name when calling [[field()]] to create a new field.
      * @see fieldConfig
      */
-    public $fieldClass = 'common\widgets\ActiveFieldEx';
+    public $fieldClass = 'onix\widgets\ActiveField';
 
     /**
      * @inheritdoc
