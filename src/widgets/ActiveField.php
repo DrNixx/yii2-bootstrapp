@@ -175,24 +175,10 @@ HTML;
     public function widget($class, $config = [])
     {
         if (is_subclass_of($class, 'onix\widgets\IInputWidget')) {
-            $config['model'] = $this->model;
-            $config['attribute'] = $this->attribute;
             $config['field'] = $this;
-            if (isset($config['options'])) {
-                if ($this->form->validationStateOn === ActiveForm::VALIDATION_STATE_ON_INPUT) {
-                    $this->addErrorClassIfNeeded($config['options']);
-                }
-
-                $this->addAriaAttributes($config['options']);
-                $this->adjustLabelFor($config['options']);
-            }
-
-            /** @noinspection PhpUndefinedMethodInspection */
-            $this->parts['{input}'] = $class::widget($config);
-        } else {
-            parent::widget($class, $config);
         }
 
+        parent::widget($class, $config);
         return $this;
     }
 
