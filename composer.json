@@ -17,6 +17,7 @@
         "bower-asset/bootstrap": "~4.0.0",
         "bower-asset/popper.js": "~1.12.0",
 
+        "drnixx/yii2-onix": "^1.5.18",
         "drnixx/yii2-pages-asset": "^1.0"
     },
     "require-dev": {

@@ -148,6 +148,54 @@ HTML;
         }
     }
 
+    /**
+     * Renders a widget as the input of the field.
+     *
+     * Note that the widget must have both `model` and `attribute` properties. They will
+     * be initialized with [[model]] and [[attribute]] of this field, respectively.
+     *
+     * If you want to use a widget that does not have `model` and `attribute` properties,
+     * please use [[render()]] instead.
+     *
+     * For example to use the [[MaskedInput]] widget to get some date input, you can use
+     * the following code, assuming that `$form` is your [[ActiveForm]] instance:
+     *
+     * ```php
+     * $form->field($model, 'date')->widget(\yii\widgets\MaskedInput::className(), [
+     *     'mask' => '99/99/9999',
+     * ]);
+     * ```
+     *
+     * If you set a custom `id` for the input element, you may need to adjust the [[$selectors]] accordingly.
+     *
+     * @param string $class the widget class name.
+     * @param array $config name-value pairs that will be used to initialize the widget.
+     * @return $this the field object itself.
+     */
+    public function widget($class, $config = [])
+    {
+        if (is_subclass_of($class, 'onix\widgets\IInputWidget')) {
+            $config['model'] = $this->model;
+            $config['attribute'] = $this->attribute;
+            $config['field'] = $this;
+            if (isset($config['options'])) {
+                if ($this->form->validationStateOn === ActiveForm::VALIDATION_STATE_ON_INPUT) {
+                    $this->addErrorClassIfNeeded($config['options']);
+                }
+
+                $this->addAriaAttributes($config['options']);
+                $this->adjustLabelFor($config['options']);
+            }
+
+            /** @noinspection PhpUndefinedMethodInspection */
+            $this->parts['{input}'] = $class::widget($config);
+        } else {
+            parent::widget($class, $config);
+        }
+
+        return $this;
+    }
+
     public function pages()
     {
         $this->pagesStyle = true;
