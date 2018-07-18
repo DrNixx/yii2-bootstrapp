@@ -1,7 +1,7 @@
 <?php
 namespace onix\widgets;
 
-use yii\bootstrap\ActiveForm as ActiveFormBase;
+use yii\bootstrap4\ActiveForm as ActiveFormBase;
 use yii\helpers\ArrayHelper;
 
 class ActiveForm extends ActiveFormBase

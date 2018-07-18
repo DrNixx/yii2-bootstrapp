@@ -3,7 +3,8 @@ namespace onix\widgets;
 
 use Yii;
 use yii\base\Model;
-use yii\bootstrap\Widget;
+use yii\bootstrap4\Alert;
+use yii\bootstrap4\Widget;
 use yii\helpers\Html;
 
 class ModelError extends Widget
@@ -39,7 +40,7 @@ class ModelError extends Widget
             $header = Yii::t('common', 'Error');
             $message = "<h4 class=\"alert-heading\"><i class=\"xi-attention\"></i>{$header}!</h4>{$errors}";
 
-            echo \yii\bootstrap\Alert::widget([
+            echo Alert::widget([
                 'body' => $message,
                 'options' => $this->options,
             ]);

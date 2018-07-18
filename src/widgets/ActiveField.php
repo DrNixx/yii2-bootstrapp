@@ -2,7 +2,7 @@
 namespace onix\widgets;
 
 use Yii;
-use yii\bootstrap\ActiveField as ActiveFieldBase;
+use yii\bootstrap4\ActiveField as ActiveFieldBase;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
