@@ -357,16 +357,16 @@
         },
         {
             "name": "drnixx/yii2-pages-asset",
-            "version": "1.1.7",
+            "version": "1.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-pages-asset.git",
-                "reference": "6960508f5d961eee3d168d96ad278dc779b89f06"
+                "reference": "5ef3dc8b2c9a08aea16df839e028e93e90a2eb68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-pages-asset/zipball/6960508f5d961eee3d168d96ad278dc779b89f06",
-                "reference": "6960508f5d961eee3d168d96ad278dc779b89f06",
+                "url": "https://api.github.com/repos/DrNixx/yii2-pages-asset/zipball/5ef3dc8b2c9a08aea16df839e028e93e90a2eb68",
+                "reference": "5ef3dc8b2c9a08aea16df839e028e93e90a2eb68",
                 "shasum": ""
             },
             "require": {
@@ -395,7 +395,7 @@
                 }
             ],
             "description": "Yii2 Assets Bundle for Revox.Io Pages",
-            "time": "2018-07-18T13:28:38+00:00"
+            "time": "2018-07-18T14:39:49+00:00"
         },
         {
             "name": "drnixx/yii2-scrollbar-asset",
