@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2810595f0f57036b29f9b741a7c62a03",
+    "content-hash": "8a92ae70e430ce74e60b976963b72d7d",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -238,16 +238,16 @@
         },
         {
             "name": "drnixx/yii2-fa-asset",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-fa-asset.git",
-                "reference": "3ec7985a86af795c15c8f4bf0842487f1521501d"
+                "reference": "fecaa7a6d9c202a8af03a5396537c7cd612fa4db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-fa-asset/zipball/3ec7985a86af795c15c8f4bf0842487f1521501d",
-                "reference": "3ec7985a86af795c15c8f4bf0842487f1521501d",
+                "url": "https://api.github.com/repos/DrNixx/yii2-fa-asset/zipball/fecaa7a6d9c202a8af03a5396537c7cd612fa4db",
+                "reference": "fecaa7a6d9c202a8af03a5396537c7cd612fa4db",
                 "shasum": ""
             },
             "require": {
@@ -272,20 +272,20 @@
                 }
             ],
             "description": "FontAwesome Assets for Yii2",
-            "time": "2018-03-14T16:56:33+00:00"
+            "time": "2018-07-19T17:16:38+00:00"
         },
         {
             "name": "drnixx/yii2-mousewheel-asset",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-mousewheel-asset.git",
-                "reference": "3928a7abf7ec9afd088356ba74a56e8c5f1d0826"
+                "reference": "58fdb39e7e552b3872ead43748def0b995f6967a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-mousewheel-asset/zipball/3928a7abf7ec9afd088356ba74a56e8c5f1d0826",
-                "reference": "3928a7abf7ec9afd088356ba74a56e8c5f1d0826",
+                "url": "https://api.github.com/repos/DrNixx/yii2-mousewheel-asset/zipball/58fdb39e7e552b3872ead43748def0b995f6967a",
+                "reference": "58fdb39e7e552b3872ead43748def0b995f6967a",
                 "shasum": ""
             },
             "require": {
@@ -310,20 +310,20 @@
                 }
             ],
             "description": "Yii2 Assets Bundle for jquery.mousewheel library",
-            "time": "2018-03-14T15:19:27+00:00"
+            "time": "2018-07-19T17:52:52+00:00"
         },
         {
             "name": "drnixx/yii2-onix",
-            "version": "1.6.20",
+            "version": "1.8.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-onix.git",
-                "reference": "b4bf0a0a640d82f2b6d4f651d599022ae0e72418"
+                "reference": "195a41d2b07bec2b2e2d2d2792dc4cfcdc64194c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-onix/zipball/b4bf0a0a640d82f2b6d4f651d599022ae0e72418",
-                "reference": "b4bf0a0a640d82f2b6d4f651d599022ae0e72418",
+                "url": "https://api.github.com/repos/DrNixx/yii2-onix/zipball/195a41d2b07bec2b2e2d2d2792dc4cfcdc64194c",
+                "reference": "195a41d2b07bec2b2e2d2d2792dc4cfcdc64194c",
                 "shasum": ""
             },
             "require": {
@@ -353,20 +353,20 @@
                 }
             ],
             "description": "Helpers and Extensions for Yii2",
-            "time": "2018-06-26T22:25:16+00:00"
+            "time": "2018-07-18T17:32:00+00:00"
         },
         {
             "name": "drnixx/yii2-pages-asset",
-            "version": "1.1.8",
+            "version": "1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-pages-asset.git",
-                "reference": "5ef3dc8b2c9a08aea16df839e028e93e90a2eb68"
+                "reference": "085db22c7f7af76896bd32c91b5ae06bb802e55c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-pages-asset/zipball/5ef3dc8b2c9a08aea16df839e028e93e90a2eb68",
-                "reference": "5ef3dc8b2c9a08aea16df839e028e93e90a2eb68",
+                "url": "https://api.github.com/repos/DrNixx/yii2-pages-asset/zipball/085db22c7f7af76896bd32c91b5ae06bb802e55c",
+                "reference": "085db22c7f7af76896bd32c91b5ae06bb802e55c",
                 "shasum": ""
             },
             "require": {
@@ -395,20 +395,20 @@
                 }
             ],
             "description": "Yii2 Assets Bundle for Revox.Io Pages",
-            "time": "2018-07-18T14:39:49+00:00"
+            "time": "2018-07-19T18:07:08+00:00"
         },
         {
             "name": "drnixx/yii2-scrollbar-asset",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-scrollbar-asset.git",
-                "reference": "778a4813250f4a75ce8e442adae4966ccd54ede4"
+                "reference": "36ca8d52b5f5f0e7f8f560bdad93fec546b0e6f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-scrollbar-asset/zipball/778a4813250f4a75ce8e442adae4966ccd54ede4",
-                "reference": "778a4813250f4a75ce8e442adae4966ccd54ede4",
+                "url": "https://api.github.com/repos/DrNixx/yii2-scrollbar-asset/zipball/36ca8d52b5f5f0e7f8f560bdad93fec546b0e6f7",
+                "reference": "36ca8d52b5f5f0e7f8f560bdad93fec546b0e6f7",
                 "shasum": ""
             },
             "require": {
@@ -433,20 +433,20 @@
                 }
             ],
             "description": "Yii2 Assets Bundle for jquery.scrollbar library",
-            "time": "2018-03-14T15:14:11+00:00"
+            "time": "2018-07-19T17:56:34+00:00"
         },
         {
             "name": "drnixx/yii2-unveil-asset",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-unveil-asset.git",
-                "reference": "58ebc42150b7342ac4850f0b20ec60abbec98cea"
+                "reference": "af3903c7a870ff511aac4c84b62c0a8c474b3b02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-unveil-asset/zipball/58ebc42150b7342ac4850f0b20ec60abbec98cea",
-                "reference": "58ebc42150b7342ac4850f0b20ec60abbec98cea",
+                "url": "https://api.github.com/repos/DrNixx/yii2-unveil-asset/zipball/af3903c7a870ff511aac4c84b62c0a8c474b3b02",
+                "reference": "af3903c7a870ff511aac4c84b62c0a8c474b3b02",
                 "shasum": ""
             },
             "require": {
@@ -471,7 +471,7 @@
                 }
             ],
             "description": "Yii2 Assets Bundle for jquery.unveil library",
-            "time": "2018-03-14T15:07:33+00:00"
+            "time": "2018-07-19T17:58:25+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
