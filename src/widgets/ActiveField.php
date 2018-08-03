@@ -178,7 +178,9 @@ HTML;
             $config['field'] = $this;
         }
 
-        parent::widget($class, $this->checkName($config));
+        $config['options'] = $this->checkName($config['options']);
+
+        parent::widget($class, $config);
         return $this;
     }
 
