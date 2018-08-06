@@ -178,6 +178,10 @@ HTML;
             $config['field'] = $this;
         }
 
+        if (!isset($config['options'])) {
+            $config['options'] = [];
+        }
+
         $config['options'] = $this->checkName($config['options']);
 
         parent::widget($class, $config);
