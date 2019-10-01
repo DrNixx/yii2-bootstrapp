@@ -1,10 +1,12 @@
 <?php
 namespace onix\widgets;
 
+use Exception;
 use Yii;
 use yii\bootstrap4\ActiveField as ActiveFieldBase;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
+use yii\web\View;
 
 class ActiveField extends ActiveFieldBase
 {
@@ -19,7 +21,7 @@ class ActiveField extends ActiveFieldBase
     public $errorOptions = ['class' => 'invalid-feedback'];
 
     /**
-     * @var \yii\web\View
+     * @var View
      */
     private $view;
 
@@ -44,12 +46,10 @@ class ActiveField extends ActiveFieldBase
     /**
      * @inheritdoc
      */
-    public $checkboxTemplate = <<<HTML
+    public $checkTemplate = <<<HTML
 <div class="checkbox {controlStyle}">
     {input}
-    {beginLabel}
-    {labelTitle}
-    {endLabel}
+    {beginLabel}{labelTitle}{endLabel}
     {error}
     {hint}
 </div>
@@ -60,10 +60,8 @@ HTML;
      */
     public $radioTemplate = <<<HTML
 <div class="radio">
-    {beginLabel}
-    111{input}
-    {labelTitle}
-    {endLabel}
+    {input}
+    {beginLabel}{labelTitle}{endLabel}
     {error}
     {hint}
 </div>
@@ -72,13 +70,11 @@ HTML;
     /**
      * @inheritdoc
      */
-    public $horizontalCheckboxTemplate = <<<HTML
+    public $checkHorizontalTemplate = <<<HTML
 {beginWrapper}
 <div class="checkbox">
-    {beginLabel}
     {input}
-    {labelTitle}
-    {endLabel}
+    {beginLabel}{labelTitle}{endLabel}
 </div>
 {error}
 {endWrapper}
@@ -88,7 +84,7 @@ HTML;
     /**
      * @inheritdoc
      */
-    public $horizontalRadioTemplate = <<<HTML
+    public $radioHorizontalTemplate = <<<HTML
 {beginWrapper}
 <div class="radio">
     {beginLabel}
@@ -171,6 +167,8 @@ HTML;
      * @param string $class the widget class name.
      * @param array $config name-value pairs that will be used to initialize the widget.
      * @return $this the field object itself.
+     *
+     * @throws Exception
      */
     public function widget($class, $config = [])
     {
@@ -250,7 +248,7 @@ HTML;
     /**
      * @inheritdoc
      */
-    public function checkbox($options = [], $enclosedByLabel = true)
+    public function checkbox($options = [], $enclosedByLabel = false)
     {
         $this->parts['{controlStyle}'] = isset($options['controlStyle']) ? $options['controlStyle'] : 'check-primary';
         return parent::checkbox($this->checkName($options), $enclosedByLabel);
@@ -293,61 +291,11 @@ HTML;
     }
 
     /**
-     * @param array $instanceConfig the configuration passed to this instance's constructor
-     * @return array the layout specific default configuration for this instance
-     */
-    protected function createLayoutConfig($instanceConfig)
-    {
-        $config = [
-            'labelOptions' => [
-                'class' => 'form-label'
-            ],
-            'hintOptions' => [
-                'tag' => 'small',
-                'class' => 'form-text text-muted',
-            ],
-            'errorOptions' => [
-                'tag' => 'div',
-                'class' => 'invalid-feedback',
-            ],
-            'inputOptions' => [
-                'class' => 'form-control',
-            ],
-        ];
-
-        $layout = $instanceConfig['form']->layout;
-
-        if ($layout === 'horizontal') {
-            $config['template'] = "{label}\n{beginWrapper}\n{input}\n{error}\n{endWrapper}\n{hint}";
-            $cssClasses = [
-                'offset' => 'col-sm-offset-3',
-                'label' => 'col-sm-3',
-                'wrapper' => 'col-sm-6',
-                'error' => '',
-                'hint' => 'col-sm-3',
-            ];
-            if (isset($instanceConfig['horizontalCssClasses'])) {
-                $cssClasses = ArrayHelper::merge($cssClasses, $instanceConfig['horizontalCssClasses']);
-            }
-            $config['horizontalCssClasses'] = $cssClasses;
-            $config['wrapperOptions'] = ['class' => $cssClasses['wrapper']];
-            $config['labelOptions'] = ['class' => 'control-label ' . $cssClasses['label']];
-            $config['errorOptions'] = ['class' => 'help-block help-block-error ' . $cssClasses['error']];
-            $config['hintOptions'] = ['class' => 'help-block ' . $cssClasses['hint']];
-        } elseif ($layout === 'inline') {
-            $config['labelOptions'] = ['class' => 'sr-only'];
-            $config['enableError'] = false;
-        }
-
-        return $config;
-    }
-
-    /**
      * Returns the view object that can be used to render views or view files.
      * The [[render()]] and [[renderFile()]] methods will use
      * this view object to implement the actual view rendering.
      * If not set, it will default to the "view" application component.
-     * @return \yii\web\View the view object that can be used to render views or view files.
+     * @return View the view object that can be used to render views or view files.
      */
     protected function getView()
     {
