@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de69cd7aebdb3c1eaa54cbc014cf9a1d",
+    "content-hash": "59ae7da1a12dbe3e64f28dd75abc5d45",
     "packages": [
         {
             "name": "bower-asset/font-awesome",
@@ -335,16 +335,16 @@
         },
         {
             "name": "drnixx/yii2-pages-asset",
-            "version": "2.0.10",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DrNixx/yii2-pages-asset.git",
-                "reference": "8e1d3f95d9f44408a85cb69364eaa588727575f1"
+                "reference": "46dc6b122eb538381c5daf134c84290799b0a707"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DrNixx/yii2-pages-asset/zipball/8e1d3f95d9f44408a85cb69364eaa588727575f1",
-                "reference": "8e1d3f95d9f44408a85cb69364eaa588727575f1",
+                "url": "https://api.github.com/repos/DrNixx/yii2-pages-asset/zipball/46dc6b122eb538381c5daf134c84290799b0a707",
+                "reference": "46dc6b122eb538381c5daf134c84290799b0a707",
                 "shasum": ""
             },
             "require": {
@@ -373,7 +373,7 @@
                 }
             ],
             "description": "Yii2 Assets Bundle for Revox.Io Pages",
-            "time": "2020-01-16T12:14:34+00:00"
+            "time": "2020-05-24T00:06:22+00:00"
         },
         {
             "name": "drnixx/yii2-scrollbar-asset",
