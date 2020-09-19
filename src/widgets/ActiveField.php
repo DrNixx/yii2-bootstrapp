@@ -47,7 +47,7 @@ class ActiveField extends ActiveFieldBase
      * @inheritdoc
      */
     public $checkTemplate = <<<HTML
-<div class="checkbox {controlStyle}">
+<div class="form-check {controlStyle}">
     {input}
     {beginLabel}{labelTitle}{endLabel}
     {error}
@@ -59,7 +59,7 @@ HTML;
      * @inheritdoc
      */
     public $radioTemplate = <<<HTML
-<div class="radio">
+<div class="form-check">
     {input}
     {beginLabel}{labelTitle}{endLabel}
     {error}
@@ -72,7 +72,7 @@ HTML;
      */
     public $checkHorizontalTemplate = <<<HTML
 {beginWrapper}
-<div class="checkbox">
+<div class="form-check form-check-inline">
     {input}
     {beginLabel}{labelTitle}{endLabel}
 </div>
@@ -86,7 +86,7 @@ HTML;
      */
     public $radioHorizontalTemplate = <<<HTML
 {beginWrapper}
-<div class="radio">
+<div class="form-check form-check-inline">
     {beginLabel}
     {input}
     {labelTitle}
@@ -96,16 +96,6 @@ HTML;
 {endWrapper}
 {hint}
 HTML;
-
-    /**
-     * @inheritdoc
-     */
-    public $inlineCheckboxListTemplate = "{label}\n{beginWrapper}\n{input}\n{error}\n{endWrapper}\n{hint}";
-    /**
-     * @inheritdoc
-     */
-    public $inlineRadioListTemplate = "{label}\n{beginWrapper}\n{input}\n{error}\n{endWrapper}\n{hint}";
-
 
     /**
      * @var string the template for hidden input
@@ -250,7 +240,7 @@ HTML;
      */
     public function checkbox($options = [], $enclosedByLabel = false)
     {
-        $this->parts['{controlStyle}'] = isset($options['controlStyle']) ? $options['controlStyle'] : 'check-primary';
+        $this->parts['{controlStyle}'] = isset($options['controlStyle']) ? $options['controlStyle'] : 'primary';
         return parent::checkbox($this->checkName($options), $enclosedByLabel);
     }
 
