@@ -21,6 +21,26 @@ class ActiveField extends ActiveFieldBase
     public $errorOptions = ['class' => 'invalid-feedback'];
 
     /**
+     * @inheritdoc
+     */
+    public $checkOptions = [
+        'class' => ['widget' => 'custom-check-input'],
+        'labelOptions' => [
+            'class' => ['widget' => '']
+        ]
+    ];
+
+    /**
+     * @inheritdoc
+     */
+    public $radioOptions = [
+        'class' => ['widget' => 'radio-control-input'],
+        'labelOptions' => [
+            'class' => ['widget' => '']
+        ]
+    ];
+
+    /**
      * @var View
      */
     private $view;
