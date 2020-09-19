@@ -240,7 +240,7 @@ HTML;
      */
     public function checkbox($options = [], $enclosedByLabel = false)
     {
-        $this->parts['{controlStyle}'] = isset($options['controlStyle']) ? $options['controlStyle'] : 'primary';
+        $this->parts['{controlStyle}'] = isset($options['controlStyle']) ? $options['controlStyle'] : '';
         return parent::checkbox($this->checkName($options), $enclosedByLabel);
     }
 
@@ -251,7 +251,7 @@ HTML;
 
     public function radioList($items, $options = [])
     {
-        $controlStyle = isset($options['controlStyle']) ? $options['controlStyle'] : 'primary';
+        $controlStyle = isset($options['controlStyle']) ? $options['controlStyle'] : '';
 
         if ($this->pagesStyle) {
             $options['class'] =
