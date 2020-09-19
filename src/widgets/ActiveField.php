@@ -34,7 +34,7 @@ class ActiveField extends ActiveFieldBase
      * @inheritdoc
      */
     public $radioOptions = [
-        'class' => ['widget' => 'radio-control-input'],
+        'class' => ['widget' => 'custom-radio-input'],
         'labelOptions' => [
             'class' => ['widget' => '']
         ]
