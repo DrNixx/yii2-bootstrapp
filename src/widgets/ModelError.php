@@ -3,7 +3,6 @@ namespace onix\widgets;
 
 use Yii;
 use yii\base\Model;
-use yii\bootstrap4\Alert;
 use yii\bootstrap4\Widget;
 use yii\helpers\Html;
 
@@ -25,23 +24,18 @@ class ModelError extends Widget
             $appendCss = isset($this->options['class']) ? ' ' . $this->options['class'] : '';
             $this->options['class'] = "alert-danger{$appendCss}";
 
-            $errors = "<ul>";
-            foreach ($this->model->getErrors() as $attr => $error) {
-                if (is_array($error)) {
-                    $error = implode("; ", $error);
-                }
-
-                $error = Html::encode($error);
-                $errors .= "<li>$error</li>";
-            }
-
-            $errors .= "</ul>";
+            $items = array_map(
+                function($a) {
+                    return is_array($a) ? implode(';', $a) : $a;
+                },
+                array_values($this->model->getErrors())
+            );
 
             $header = Yii::t('common', 'Error');
-            $message = "<h4 class=\"alert-heading\"><i class=\"xi-attention\"></i>{$header}!</h4>{$errors}";
-
             echo Alert::widget([
-                'body' => $message,
+                'header' => $header,
+                'icon' => 'xi-attention',
+                'body' => Html::ul($items),
                 'options' => $this->options,
             ]);
         }
