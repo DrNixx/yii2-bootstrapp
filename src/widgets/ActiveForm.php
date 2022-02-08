@@ -1,7 +1,8 @@
 <?php
 namespace onix\widgets;
 
-use yii\bootstrap4\ActiveForm as ActiveFormBase;
+use yii\bootstrap5\ActiveField as ActiveFieldBase;
+use yii\bootstrap5\ActiveForm as ActiveFormBase;
 use yii\helpers\ArrayHelper;
 
 class ActiveForm extends ActiveFormBase
@@ -21,7 +22,7 @@ class ActiveForm extends ActiveFormBase
      * @inheritdoc
      * @return ActiveField the created ActiveFieldEx object
      */
-    public function field($model, $attribute, $options = [])
+    public function field($model, $attribute, $options = []): ActiveFieldBase
     {
         return parent::field(
             $model,

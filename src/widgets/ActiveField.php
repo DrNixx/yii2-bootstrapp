@@ -3,7 +3,7 @@ namespace onix\widgets;
 
 use Exception;
 use Yii;
-use yii\bootstrap4\ActiveField as ActiveFieldBase;
+use yii\bootstrap5\ActiveField as ActiveFieldBase;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\web\View;

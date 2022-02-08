@@ -3,7 +3,7 @@ namespace onix\widgets;
 
 use Yii;
 use yii\base\Model;
-use yii\bootstrap4\Widget;
+use yii\bootstrap5\Widget;
 use yii\helpers\Html;
 
 class ModelError extends Widget

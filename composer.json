@@ -1,6 +1,6 @@
 {
     "name": "drnixx/yii2-bootstrapp",
-    "description": "Bootstrap4 & Revox.Io Pages widgets for Yii2",
+    "description": "Bootstrap5 & Revox.Io Pages widgets for Yii2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,13 +11,13 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": ">=5.6.0",
+        "php": ">=7.0",
 
         "yiisoft/yii2": "~2.0.38",
-        "yiisoft/yii2-bootstrap4": "~2.0.0",
+        "yiisoft/yii2-bootstrap5": "~2.0.0",
 
         "drnixx/yii2-onix": "^1.0",
-        "drnixx/yii2-pages-asset": "^2.1"
+        "drnixx/yii2-pages-asset": "^3.0"
     },
     "require-dev": {
         "yiisoft/yii2-faker": "~2.0.0",
@@ -35,7 +35,7 @@
         }
     },
     "config": {
-        "platform": {"php": "5.6"}
+        "platform": {"php": "7.0"}
     },
     "repositories": [
         {
