@@ -258,18 +258,18 @@ HTML;
     /**
      * @inheritdoc
      */
-    public function checkbox($options = [], $enclosedByLabel = false)
+    public function checkbox($options = [], $enclosedByLabel = false): ActiveFieldBase
     {
         $this->parts['{controlStyle}'] = isset($options['controlStyle']) ? $options['controlStyle'] : '';
         return parent::checkbox($this->checkName($options), $enclosedByLabel);
     }
 
-    public function radio($options = [], $enclosedByLabel = true)
+    public function radio($options = [], $enclosedByLabel = true): ActiveFieldBase
     {
         return parent::radio($this->checkName($options), $enclosedByLabel);
     }
 
-    public function radioList($items, $options = [])
+    public function radioList($items, $options = []): ActiveFieldBase
     {
         $controlStyle = isset($options['controlStyle']) ? $options['controlStyle'] : '';
 
